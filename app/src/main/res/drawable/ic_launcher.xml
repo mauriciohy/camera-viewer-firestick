@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone placeholder — substitua por um PNG 96x96 para produção -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1565C0" />
+    <corners android:radius="16dp" />
+</shape>

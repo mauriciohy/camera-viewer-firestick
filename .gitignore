@@ -1,0 +1,30 @@
+# Android Studio / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# App build outputs
+app/build/
+
+# Keystore (nunca comitar chaves privadas)
+*.jks
+*.keystore
+
+# Arquivos de preferências do IDE
+*.class
+bin/
+gen/
+out/
+
+# Logs
+*.log

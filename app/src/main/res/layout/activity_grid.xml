@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Grid 2x2 ocupa quase toda a tela -->
+    <LinearLayout
+        android:id="@+id/gridContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Linha 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Câmera 1 -->
+            <FrameLayout
+                android:id="@+id/cell1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_camera_normal"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.cameraviewer.player.VlcPlayerView
+                    android:id="@+id/player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:padding="8dp"
+                    android:text="Câmera 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <!-- Câmera 2 -->
+            <FrameLayout
+                android:id="@+id/cell2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_camera_normal"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.cameraviewer.player.VlcPlayerView
+                    android:id="@+id/player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvStatus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:padding="8dp"
+                    android:text="Câmera 2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Linha 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Câmera 3 -->
+            <FrameLayout
+                android:id="@+id/cell3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_camera_normal"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.cameraviewer.player.VlcPlayerView
+                    android:id="@+id/player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvStatus3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:padding="8dp"
+                    android:text="Câmera 3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <!-- Câmera 4 -->
+            <FrameLayout
+                android:id="@+id/cell4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_camera_normal"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.cameraviewer.player.VlcPlayerView
+                    android:id="@+id/player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvStatus4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:padding="8dp"
+                    android:text="Câmera 4"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Barra inferior com botão de configurações -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#1A1A1A"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_button_secondary"
+            android:text="⚙ Configurações"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:focusable="true" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
